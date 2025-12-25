@@ -12,215 +12,200 @@ const Footer = () => {
   return (
     <footer className="bg-[#2B2F33] text-[#B8BDC3]">
 
-    {/* Top Section */}
-    <div className="max-w-7xl w-full mx-auto pt-12 pb-10">
+      {/* TOP SECTION */}
+      <div className="max-w-7xl w-full mx-auto pt-10 sm:pt-12 pb-8 sm:pb-10 px-4 sm:px-6">
 
-      {/* lg+ FLEX | lg- GRID */}
-      <div
-        className="
-          grid grid-cols-1 sm:grid-cols-2 gap-10
-          lg:hidden
-        "
-       >
-        {/* Left / Newsletter */}
-        <div className="lg:w-[280px]">
-          <img className='w-[20px] h-[32px]' src={logo2} alt="logo2" />
+        {/* MOBILE + TABLET */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-10 lg:hidden">
 
-          <p className="text-xs leading-5 mb-4">
-            Updates from our team, written with love 🧡
-          </p>
+          {/* Newsletter */}
+          <div>
+            <img className="w-[18px] h-[30px]" src={logo2} alt="logo2" />
 
-          <div className="flex items-center bg-[#3A3F44] rounded-md overflow-hidden max-w-[260px]">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="bg-transparent text-xs px-3 py-2 w-full outline-none placeholder:text-[#9AA0A6]"
-            />
-            <button className="bg-white text-black px-3 py-2 text-xs">
-              →
-            </button>
+            <p className="text-xs leading-5 my-4">
+              Updates from our team, written with love 🧡
+            </p>
+
+            <div className="flex items-center bg-[#3A3F44] rounded-md overflow-hidden max-w-[260px]">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="bg-transparent text-xs px-3 py-2 w-full outline-none placeholder:text-[#9AA0A6]"
+              />
+              <button className="bg-white text-black px-3 py-2 text-xs">
+                →
+              </button>
+            </div>
+          </div>
+
+          {/* Product */}
+          <div>
+            <h4 className="text-white text-xs font-semibold mb-3">
+              Product
+            </h4>
+            <ul className="space-y-[6px] text-xs">
+              <li>Home</li>
+              <li>How It Works</li>
+              <li>All Apps</li>
+              <li>Pricing</li>
+              <li>Setapp for Teams</li>
+              <li>Blog</li>
+              <li>Podcast</li>
+              <li>Download</li>
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h4 className="text-white text-xs font-semibold mb-3">
+              Company
+            </h4>
+            <ul className="space-y-[6px] text-xs">
+              <li>About</li>
+              <li>Support</li>
+              <li>Education Discount</li>
+              <li>Family Plan</li>
+              <li>For Developers</li>
+              <li>Gift Cards</li>
+              <li>Redeem Card or Code</li>
+              <li>Affiliate Program</li>
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h4 className="text-white text-xs font-semibold mb-3">
+              Resources
+            </h4>
+            <ul className="space-y-[6px] text-xs">
+              <li>Getting started with Setapp</li>
+              <li>Remote access to other Macs</li>
+              <li>Fix macOS Ventura problems</li>
+              <li>Best productivity apps</li>
+              <li>Best YouTube downloaders</li>
+              <li>Uninstall apps</li>
+            </ul>
           </div>
         </div>
 
-        {/* Product */}
-        <div>
-          <h4 className="text-white text-xs font-semibold mb-4">
-            Product
-          </h4>
-          <ul className="space-y-[6px] text-xs">
-            <li>Home</li>
-            <li>How It Works</li>
-            <li>All Apps</li>
-            <li>Pricing</li>
-            <li>Setapp for Teams</li>
-            <li>Blog</li>
-            <li>Podcast</li>
-            <li>Download</li>
-          </ul>
-        </div>
+        {/* DESKTOP (LG SAME AS ORIGINAL) */}
+        <div className="hidden lg:flex justify-between">
 
-        {/* Company */}
-        <div>
-          <h4 className="text-white text-xs font-semibold mb-4">
-            Company
-          </h4>
-          <ul className="space-y-[6px] text-xs">
-            <li>About</li>
-            <li>Support</li>
-            <li>Education Discount</li>
-            <li>Family Plan</li>
-            <li>For Developers</li>
-            <li>Gift Cards</li>
-            <li>Redeem Card or Code</li>
-            <li>Affiliate Program</li>
-          </ul>
-        </div>
+          {/* Newsletter */}
+          <div className="lg:w-[280px]">
+            <img className="h-[32px]" src={logo2} alt="logo2" />
 
-        {/* Resources */}
-        <div>
-          <h4 className="text-white text-xs font-semibold mb-4">
-            Resources
-          </h4>
-          <ul className="space-y-[6px] text-xs">
-            <li>Getting started with Setapp</li>
-            <li>Remote access to other Macs</li>
-            <li>Fix macOS Ventura problems</li>
-            <li>Best productivity apps</li>
-            <li>Best YouTube downloaders</li>
-            <li>Uninstall apps</li>
-          </ul>
-        </div>
-      </div>
+            <p className="text-xs leading-5 mb-4 mt-[78px]">
+              Updates from our team, written with love 🧡
+            </p>
 
-      <div
-        className=" hidden
-          grid grid-cols-1 sm:grid-cols-2 gap-10
-          lg:flex justify-between
-        "
-       >
-        {/* Left / Newsletter */}
-        <div className="lg:w-[280px]">
-        <img className='w-full max-w:content-fit h-[32px]' src={logo2} alt="logo2" />
+            <div className="flex items-center bg-[#3A3F44] rounded-md overflow-hidden max-w-[260px]">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="bg-transparent text-xs px-3 py-2 w-full outline-none placeholder:text-[#9AA0A6]"
+              />
+              <button className="bg-white text-black px-3 py-2 text-xs">
+                →
+              </button>
+            </div>
+          </div>
 
-          <p className="text-xs leading-5 mb-4 mt-[30px] lg:mt-[78px]">
-            Updates from our team, written with love 🧡
-          </p>
+          <div className="flex gap-[70px]">
 
-          <div className="flex items-center bg-[#3A3F44] rounded-md overflow-hidden max-w-[260px]">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="bg-transparent text-xs px-3 py-2 w-full outline-none placeholder:text-[#9AA0A6]"
-            />
-            <button className="bg-white text-black px-3 py-2 text-xs">
-              →
-            </button>
+            {/* Product */}
+            <div>
+              <h4 className="text-white text-xs font-semibold mb-4">
+                Product
+              </h4>
+              <ul className="space-y-[6px] text-xs">
+                <li>Home</li>
+                <li>How It Works</li>
+                <li>All Apps</li>
+                <li>Pricing</li>
+                <li>Setapp for Teams</li>
+                <li>Blog</li>
+                <li>Podcast</li>
+                <li>Download</li>
+              </ul>
+            </div>
+
+            {/* Company */}
+            <div>
+              <h4 className="text-white text-xs font-semibold mb-4">
+                Company
+              </h4>
+              <ul className="space-y-[6px] text-xs">
+                <li>About</li>
+                <li>Support</li>
+                <li>Education Discount</li>
+                <li>Family Plan</li>
+                <li>For Developers</li>
+                <li>Gift Cards</li>
+                <li>Redeem Card or Code</li>
+                <li>Affiliate Program</li>
+              </ul>
+            </div>
+
+            {/* Resources */}
+            <div>
+              <h4 className="text-white text-xs font-semibold mb-4">
+                Resources
+              </h4>
+              <ul className="space-y-[6px] text-xs">
+                <li>Getting started with Setapp</li>
+                <li>Remote access to other Macs</li>
+                <li>Fix macOS Ventura problems</li>
+                <li>Best productivity apps</li>
+                <li>Best YouTube downloaders</li>
+                <li>Uninstall apps</li>
+              </ul>
+            </div>
+
           </div>
         </div>
-
-        <div className='flex flex-row gap-[70px]'>
-
-        {/* Product */}
-        <div >
-          <h4 className="text-white text-xs font-semibold mb-4">
-            Product
-          </h4>
-          <ul className="space-y-[6px] text-xs">
-            <li>Home</li>
-            <li>How It Works</li>
-            <li>All Apps</li>
-            <li>Pricing</li>
-            <li>Setapp for Teams</li>
-            <li>Blog</li>
-            <li>Podcast</li>
-            <li>Download</li>
-          </ul>
-        </div>
-
-        {/* Company */}
-        <div>
-          <h4 className="text-white text-xs font-semibold mb-4">
-            Company
-          </h4>
-          <ul className="space-y-[6px] text-xs">
-            <li>About</li>
-            <li>Support</li>
-            <li>Education Discount</li>
-            <li>Family Plan</li>
-            <li>For Developers</li>
-            <li>Gift Cards</li>
-            <li>Redeem Card or Code</li>
-            <li>Affiliate Program</li>
-          </ul>
-        </div>
-
-        {/* Resources */}
-        <div>
-          <h4 className="text-white text-xs font-semibold mb-4">
-            Resources
-          </h4>
-          <ul className="space-y-[6px] text-xs">
-            <li>Getting started with Setapp</li>
-            <li>Remote access to other Macs</li>
-            <li>Fix macOS Ventura problems</li>
-            <li>Best productivity apps</li>
-            <li>Best YouTube downloaders</li>
-            <li>Uninstall apps</li>
-          </ul>
-        </div>
-        </div>
-      </div>
-    </div>
-
-    <div className='w-full  lg:flex flex-row justify-between max-w-[1280px] mx-auto pt-4 pb-8'>
-      <div className='flex flex-row '>
-        <p className='bg-[#969799] px-[5px]  text-[#FFFFFF]'>DMCA</p>
-        <p className='bg-[#404547] px-[5px] text-[#FFFFFF]'>Protected</p>
-
-      </div>
-      <div className='flex flex-row gap-[8px] items-center'>
-        <img className='w-[28px] h-[14px]' src={usa} alt="usa" />
-        <p className='   text-[#FFFFFF]'>English</p>
-        <img className='w-[10px] h-[10px]' src={arrow} alt="arrow" />
-        
-
       </div>
 
-    </div>
-    
+      {/* LANGUAGE + DMCA */}
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between items-center gap-4 pt-4 pb-6">
+        <div className="flex">
+          <p className="bg-[#969799] px-2 text-white text-xs">DMCA</p>
+          <p className="bg-[#404547] px-2 text-white text-xs">Protected</p>
+        </div>
 
-    {/* Divider */}
-    <div className="border-t border-[#E5E5E5]"></div>
+        <div className="flex items-center gap-2">
+          <img className="w-[24px] h-[12px]" src={usa} alt="usa" />
+          <p className="text-white text-xs">English</p>
+          <img className="w-[10px] h-[10px]" src={arrow} alt="arrow" />
+        </div>
+      </div>
 
-    {/* Bottom Bar */}
-    <div className="max-w-[1280px] mx-auto   py-4
-      flex flex-col lg:flex-row
-      justify-between items-center gap-4 text-xs"
-     >
-      <p className="text-[#8F9499]">
-      © 2023 Setapp Limited, 9 Tallow Street, Youghal, Co. Cork, P36YE14, Ireland. Reg. 584165. VAT ID: IE3425001BH
-      </p>
+      {/* DIVIDER */}
+      <div className="border-t border-[#E5E5E5]"></div>
 
-      <div className="flex items-center gap-4">
-       
+      {/* BOTTOM BAR */}
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 py-4 flex flex-col lg:flex-row justify-between items-center gap-4 text-xs">
+        <p className="text-[#8F9499] text-center lg:text-left">
+          © 2023 Setapp Limited, 9 Tallow Street, Youghal, Co. Cork, P36YE14, Ireland.
+          Reg. 584165. VAT ID: IE3425001BH
+        </p>
 
         <div className="flex gap-2">
-          <img src={Fb3} className="w-6 h-6 "></img>
-          <img src={twiter3} className="w-6 h-6 "></img>
-          <img src={insta3} className="w-6 h-6 "></img>
-          <img src={youtub3} className="w-6 h-6 "></img>
-          
+          <img src={Fb3} className="w-5 h-5" />
+          <img src={twiter3} className="w-5 h-5" />
+          <img src={insta3} className="w-5 h-5" />
+          <img src={youtub3} className="w-5 h-5" />
         </div>
       </div>
-    </div>
-    <div className='w-full hidden lg:flex flex-row gap-[20px] max-w-[1280px] mx-auto py-4'>
-      <p className='font-[Avenir_Next] font-normal text-[12px] leading-[21.36px] tracking-[0] align-middle text-[#969799]'> Terms of Use</p>
-      <p className='font-[Avenir_Next] font-normal text-[12px] leading-[21.36px] tracking-[0] align-middle text-[#969799]'>Privacy Policy</p>
 
-    </div>
-  </footer>
+      {/* TERMS (LG ONLY – SAME AS ORIGINAL) */}
+      <div className="hidden lg:flex gap-5 max-w-[1280px] mx-auto py-4">
+        <p className="text-[12px] text-[#969799]">Terms of Use</p>
+        <p className="text-[12px] text-[#969799]">Privacy Policy</p>
+      </div>
+
+    </footer>
   )
 }
 
 export default Footer
-
